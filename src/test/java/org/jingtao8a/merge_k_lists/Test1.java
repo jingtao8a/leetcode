@@ -28,7 +28,7 @@ public class Test1 {
         lists[0] = createList(array1);
         lists[1] = createList(array2);
         lists[2] = createList(array3);
-        Node res = new Solution1().mergeKLists(lists);
+        Node res = new Solution2().mergeKLists(lists);
         printNode(res);
     }
 }
