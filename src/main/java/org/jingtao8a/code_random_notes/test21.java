@@ -52,6 +52,7 @@ public class test21 {
         }
         return sb;
     }
+    //翻转字符串里的单词
     public static void main(String[] args) {
         String str = "   the   sky    is   blue   ";
         str = "  hello world!  ";
