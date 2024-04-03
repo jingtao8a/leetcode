@@ -1,8 +1,5 @@
 package org.jingtao8a.code_random_notes;
 
-
-import com.sun.org.apache.xalan.internal.xsltc.compiler.util.StringStack;
-import lombok.val;
 import sun.reflect.generics.tree.Tree;
 
 import java.util.*;
@@ -239,5 +236,65 @@ public class BinaryTreeUtils {
         int leftHeight = getMaxDepthHelper(root.left);
         int rightHeight = getMaxDepthHelper(root.right);
         return Math.max(leftHeight, rightHeight) + 1;
+    }
+
+    public static int getNodeNum(TreeNode<Character> root) {
+        if (root == null) {
+            return 0;
+        }
+        int leftNum = getNodeNum(root.left);
+        int rightNum = getNodeNum(root.right);
+        return leftNum + rightNum + 1;
+    }
+
+    public static boolean determineIfBalanced(TreeNode<Character> root) {
+        int res = getHeight(root);
+        if (res == -1) {
+            return false;
+        }
+        return true;
+    }
+
+    private static int getHeight(TreeNode<Character> root) {
+        if (root == null) {
+            return 0;
+        }
+        int leftHeight = getHeight(root.left);
+        if (leftHeight == -1) {
+            return -1;
+        }
+        int rightHeight = getHeight(root.right);
+        if (rightHeight == -1) {
+            return -1;
+        }
+        if (Math.abs(leftHeight - rightHeight) > 1) {//不平衡
+            return -1;
+        }
+        return Math.max(leftHeight, rightHeight) + 1;//平衡
+    }
+
+    public static ArrayList<ArrayDeque<Character> > allPathsInTheBinaryTree(TreeNode<Character> root) {
+        if (root == null) {
+            return null;
+        }
+        ArrayList<ArrayDeque<Character> > res = new ArrayList<>();
+        ArrayDeque<Character> item = new ArrayDeque<>();
+        preOrderHelper(root, item, res);
+        return res;
+    }
+
+    public static void preOrderHelper(TreeNode<Character> root, ArrayDeque<Character> item, ArrayList<ArrayDeque<Character> > res) {
+        if (root == null) {
+            return;
+        }
+        item.offerLast(root.val);
+        if (root.left == null && root.right == null) {
+            res.add(item.clone());
+            item.pollLast();
+            return;
+        }
+        preOrderHelper(root.left, item, res);
+        preOrderHelper(root.right, item, res);
+        item.pollLast();
     }
 }

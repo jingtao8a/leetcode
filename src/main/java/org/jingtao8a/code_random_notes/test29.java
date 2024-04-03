@@ -1,5 +1,6 @@
 package org.jingtao8a.code_random_notes;
 
+import java.util.ArrayDeque;
 import java.util.ArrayList;
 
 public class test29 {
@@ -77,6 +78,16 @@ public class test29 {
 
         System.out.println(BinaryTreeUtils.judgeSymmetry(root));
         System.out.println(BinaryTreeUtils.getMaxDepth(root));
+        System.out.println(BinaryTreeUtils.getNodeNum(root));
+        System.out.println(BinaryTreeUtils.determineIfBalanced(root));
+        ArrayList<ArrayDeque<Character> > arrayList = BinaryTreeUtils.allPathsInTheBinaryTree(root);
+        for (ArrayDeque<Character> arrayDeque : arrayList) {
+            System.out.print("[ ");
+            for (Character ch : arrayDeque) {
+                System.out.print(ch + " ");
+            }
+            System.out.println(" ]");
+        }
     }
 
     public static void main(String[] args) {
