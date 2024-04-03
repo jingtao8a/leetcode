@@ -76,9 +76,9 @@ public class test29 {
         System.out.println("]");
 
         System.out.println(BinaryTreeUtils.judgeSymmetry(root));
-
-
+        System.out.println(BinaryTreeUtils.getMaxDepth(root));
     }
+
     public static void main(String[] args) {
         test2();
     }

@@ -227,4 +227,17 @@ public class BinaryTreeUtils {
         }
         return _judegeSymmetry(left.left, right.right) && _judegeSymmetry(left.right, right.left);
     }
+
+    public static int getMaxDepth(TreeNode<Character> root) {
+        return getMaxDepthHelper(root);
+    }
+
+    private static int getMaxDepthHelper(TreeNode<Character> root) {
+        if (root == null) {
+            return 0;
+        }
+        int leftHeight = getMaxDepthHelper(root.left);
+        int rightHeight = getMaxDepthHelper(root.right);
+        return Math.max(leftHeight, rightHeight) + 1;
+    }
 }
