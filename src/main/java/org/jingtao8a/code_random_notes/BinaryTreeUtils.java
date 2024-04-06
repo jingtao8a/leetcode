@@ -20,6 +20,7 @@ public class BinaryTreeUtils {
             TreeNode<Integer> root = new TreeNode<>(i);
             root.left = createPreorder1(queue);
             root.right = createPreorder1(queue);
+            return root;
         }
         return null;
     }
