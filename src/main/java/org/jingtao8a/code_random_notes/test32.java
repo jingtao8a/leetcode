@@ -9,6 +9,7 @@ public class test32 {
     public static Stack<Character> stack = new Stack<>();
     public static int sum = 0;
     public static ArrayList<List > arrayList = new ArrayList();
+    // 路径总和
     public static void preOrder(TreeNode<Character> root, int target) {
         if (root == null) {
             return;
