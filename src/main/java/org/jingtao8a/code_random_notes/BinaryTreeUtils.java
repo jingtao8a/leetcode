@@ -3,6 +3,27 @@ package org.jingtao8a.code_random_notes;
 import java.util.*;
 
 public class BinaryTreeUtils {
+    public static TreeNode<Integer> createBinaryTree(Integer[] array) {
+        Queue<Integer> queue = new LinkedList<>();
+        for (Integer i : array) {
+            queue.offer(i);
+        }
+        return createPreorder1(queue);
+    }
+
+    private static TreeNode<Integer> createPreorder1(Queue<Integer> queue) {
+        if (queue.isEmpty()) {
+            return null;
+        }
+        Integer i = queue.poll();
+        if (i != -1) {
+            TreeNode<Integer> root = new TreeNode<>(i);
+            root.left = createPreorder1(queue);
+            root.right = createPreorder1(queue);
+        }
+        return null;
+    }
+
     public static TreeNode<Character> createBinaryTree(Character[] array) {
         Queue<Character> queue = new LinkedList<>();
         for (Character o : array) {
