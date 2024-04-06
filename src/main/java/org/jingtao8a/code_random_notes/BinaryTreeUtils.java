@@ -281,7 +281,7 @@ public class BinaryTreeUtils {
         return res;
     }
 
-    public static void preOrderHelper(TreeNode<Character> root, ArrayDeque<Character> item, ArrayList<ArrayDeque<Character> > res) {
+    private static void preOrderHelper(TreeNode<Character> root, ArrayDeque<Character> item, ArrayList<ArrayDeque<Character> > res) {
         if (root == null) {
             return;
         }
