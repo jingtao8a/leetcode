@@ -203,7 +203,7 @@ public class BinaryTreeUtils {
         return res;
     }
 
-    public static <T> void  reverse(ArrayList<T> list) {
+    public static <T> void reverse(ArrayList<T> list) {
         int left = 0, right = list.size() - 1;
         while (left < right) {
             T tmp = list.get(left);
