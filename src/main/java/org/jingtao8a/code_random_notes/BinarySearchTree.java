@@ -1,11 +1,27 @@
 package org.jingtao8a.code_random_notes;
 
+import java.util.ArrayList;
+
 public class BinarySearchTree {
     private TreeNode<Integer> root;
     public void insert(Integer num) {
         root = insertHelper(root, num);
     }
 
+    public ArrayList<Integer> getSortedArray() {
+        ArrayList<Integer> list = new ArrayList<>();
+        inOrder(list, root);
+        return list;
+    }
+
+    private void inOrder(ArrayList<Integer> list, TreeNode<Integer> root) {
+        if (root == null) {
+            return;
+        }
+        inOrder(list, root.left);
+        list.add(root.val);
+        inOrder(list, root.right);
+    }
     private TreeNode<Integer> insertHelper(TreeNode<Integer> root, Integer num) {
         if (root == null) {
             return new TreeNode<>(num);
