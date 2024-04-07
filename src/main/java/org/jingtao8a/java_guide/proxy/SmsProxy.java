@@ -1,4 +1,4 @@
-package org.jingtao8a.java_guide;
+package org.jingtao8a.java_guide.proxy;
 
 public class SmsProxy implements SmsService{
     private final SmsService smsService;

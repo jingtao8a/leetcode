@@ -1,4 +1,4 @@
-package org.jingtao8a.java_guide;
+package org.jingtao8a.java_guide.proxy;
 
 public class test1 {
     public static void main(String[] args) {

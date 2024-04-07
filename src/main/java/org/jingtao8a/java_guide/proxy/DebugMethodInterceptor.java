@@ -1,4 +1,4 @@
-package org.jingtao8a.java_guide;
+package org.jingtao8a.java_guide.proxy;
 
 import net.sf.cglib.proxy.MethodInterceptor;
 import net.sf.cglib.proxy.MethodProxy;
