@@ -17,4 +17,17 @@ public class BinarySearchTreeUtils {
         preOrder(root.left);
         preOrder(root.right);
     }
+
+    public static boolean verifyIfBinarySearchTree(TreeNode<Integer> root) {
+        if (root == null) {
+            return true;
+        }
+        if (root.left != null && root.val < (Integer)root.left.val) {
+            return false;
+        }
+        if (root.right != null && root.val > (Integer)root.right.val) {
+            return false;
+        }
+        return verifyIfBinarySearchTree(root.left) && verifyIfBinarySearchTree(root.right);
+    }
 }
