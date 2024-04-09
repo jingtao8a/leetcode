@@ -12,6 +12,7 @@ public class LoggerService {
         return SERVICE;
     }
     private LoggerService() {
+        //SPI机制原理，通过配置文件找到指定接口的不同实现类的路径名，根据需要通过反射实例化对应的类
         ServiceLoader<Logger> loader = ServiceLoader.load(Logger.class);
         List<Logger> list = new ArrayList<>();
         for (Logger log : loader) {
