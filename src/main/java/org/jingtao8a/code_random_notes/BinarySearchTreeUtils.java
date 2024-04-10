@@ -18,6 +18,15 @@ public class BinarySearchTreeUtils {
         preOrder(root.right);
     }
 
+    public static void inOrder(TreeNode<Integer> root) {
+        if (root == null) {
+            return;
+        }
+        inOrder(root.left);
+        System.out.print(root.val + " ");
+        inOrder(root.right);
+    }
+
     public static boolean verifyIfBinarySearchTree(TreeNode<Integer> root) {
         if (root == null) {
             return true;
