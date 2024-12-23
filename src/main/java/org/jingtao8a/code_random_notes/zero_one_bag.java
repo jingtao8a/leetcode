@@ -1,6 +1,5 @@
 package org.jingtao8a.code_random_notes;
 
-import org.junit.Test;
 
 import java.io.*;
 import java.util.Scanner;
