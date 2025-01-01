@@ -1,4 +1,4 @@
-package org.jingtao8a.SubstrWithoutRepeatChar;
+package org.jingtao8a.code_random_notes.SubstrWithoutRepeatChar;
 
 import java.util.HashSet;
 import java.util.Set;

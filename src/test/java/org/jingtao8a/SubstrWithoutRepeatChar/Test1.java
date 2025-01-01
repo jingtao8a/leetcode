@@ -1,5 +1,6 @@
 package org.jingtao8a.SubstrWithoutRepeatChar;
 
+import org.jingtao8a.code_random_notes.SubstrWithoutRepeatChar.Solution;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
