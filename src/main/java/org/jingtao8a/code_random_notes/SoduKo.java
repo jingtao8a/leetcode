@@ -1,6 +1,5 @@
 package org.jingtao8a.code_random_notes;
 
-import com.sun.java.swing.plaf.windows.WindowsInternalFrameTitlePane;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayDeque;
