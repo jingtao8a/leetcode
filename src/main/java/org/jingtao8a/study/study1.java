@@ -29,7 +29,7 @@ class Solution {
 
 public class study1 {
     public static void main(String[] args) {
-        Solution solution = new Solution();
-        System.out.println(solution.lengthOfLongestSubstring("abba"));
+//        study7 solution = new study7();
+//        System.out.println(solution.lengthOfLongestSubstring("abba"));
     }
 }
