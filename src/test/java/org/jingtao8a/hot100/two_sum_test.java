@@ -1,6 +1,7 @@
 package org.jingtao8a.hot100;
 
-import org.junit.Test;
+
+import org.junit.jupiter.api.Test;
 
 public class two_sum_test {
     @Test

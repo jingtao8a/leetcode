@@ -1,6 +1,7 @@
 package org.jingtao8a.merge_k_lists;
 
-import org.junit.Test;
+
+import org.junit.jupiter.api.Test;
 
 public class Test1 {
     Node createList(int[] array) {
