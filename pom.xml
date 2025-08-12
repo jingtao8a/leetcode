@@ -25,28 +25,20 @@
             <artifactId>cglib</artifactId>
             <version>3.3.0</version>
         </dependency>
-        <dependencies>
-            <!-- JUnit 5 Jupiter API -->
-            <dependency>
-                <groupId>org.junit.jupiter</groupId>
-                <artifactId>junit-jupiter-api</artifactId>
-                <version>5.9.2</version>
-                <scope>test</scope>
-            </dependency>
-
-            <!-- JUnit 5 Jupiter Engine -->
-            <dependency>
-                <groupId>org.junit.jupiter</groupId>
-                <artifactId>junit-jupiter-engine</artifactId>
-                <version>5.9.2</version>
-                <scope>test</scope>
-            </dependency>
-        </dependencies>
+        <!-- JUnit 5 API -->
         <dependency>
             <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter</artifactId>
-            <version>RELEASE</version>
-            <scope>compile</scope>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>5.7.2</version>
+<!--            <scope>test</scope>-->
+        </dependency>
+
+        <!-- JUnit 5 引擎 (用于运行测试) -->
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <version>5.7.2</version>
+<!--            <scope>test</scope>-->
         </dependency>
     </dependencies>
 
