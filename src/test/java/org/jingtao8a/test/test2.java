@@ -26,4 +26,27 @@ public class test2 {
         System.out.println(res);
     }
 
+    @Test
+    public void T2() {
+        backTrack(1);
+        for (List<Integer> list : res) {
+            System.out.println(list);
+        }
+    }
+
+    int M = 3;
+    int N = 10;
+    List<List<Integer>> res = new ArrayList<>();
+    List<Integer> group = new ArrayList<>();
+    void backTrack(int start) {
+        if (group.size() == M) {
+            res.add(new ArrayList<>(group));
+            return;
+        }
+        for (int i = start; i <= N; ++i) {
+            group.add(i);
+            backTrack(i + 1);
+            group.remove(group.size() - 1);
+        }
+    }
 }
